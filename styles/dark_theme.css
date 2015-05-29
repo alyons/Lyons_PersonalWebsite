@@ -48,7 +48,7 @@ p
 	line-height: normal;
 	padding: 8px 10px;
 }
-.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover 
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover
 {
 	background: #2A2A2A; /* Old browsers */
 	background: #2A2A2A -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
@@ -62,7 +62,7 @@ p
 	border-top: 1px solid #2A2A2A;
 	border-left: 1px solid #2A2A2A;
 }
-.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active 
+.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active
 {
 	background: #3A3A3A; /* Old browsers */
 	background: #3A3A3A -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
@@ -86,7 +86,11 @@ p
 	font-weight: bold;
 	letter-spacing: 1px;
 }
+#resume-header.h3
+{
+  text-align: center;
+}
 .projectButton
 	{
-		
+
 	}
