@@ -52,7 +52,7 @@ function showTestOverlay()
 	
 	var sideBar = document.createElement("div");
 	sideBar.setAttribute("class", "one-third column omega");
-	sideBar.innerHTML = "<p>Image</p><p>Link</p><p>Role</p><p>Collaborators</p><p>Miscellaneous</p>";
+	sideBar.innerHTML = "<p>Image</p><p><a href=\"http://lumeapp.co/\">Lume Website</a></p><p>Role: Software Engineer, Co-Founder</p><p>Collaborators</p>";
 	overlay.appendChild(sideBar);
 	
 	document.body.appendChild(overlay);
