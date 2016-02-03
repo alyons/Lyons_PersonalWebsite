@@ -5,16 +5,19 @@
     $routeProvider
     .when("/home", {
       // template:"<h1>Home</h1>"
-      templateUrl: "home.html"
+      templateUrl: "pages/home.html"
     })
     .when("/projects", {
-      template:"<h1>Projects</h1>"
+      // template:"<h1>Projects</h1>"
+      templateUrl: "pages/projects.html"
     })
     .when("/about", {
-      template:"<h1>About</h1>"
+      // template:"<h1>About</h1>"
+      templateUrl: "pages/about.html"
     })
     .when("/contact", {
-      template:"<h1>Contact</h1>"
+      // template:"<h1>Contact</h1>"
+      templateUrl: "pages/contact.html"
     })
     .otherwise({
       redirectTo: "/home"
