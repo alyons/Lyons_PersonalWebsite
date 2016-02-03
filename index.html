@@ -26,118 +26,45 @@
 		<link rel="stylesheet" href="styles/base.css">
 		<link rel="stylesheet" href="styles/skeleton.css">
 		<link rel="stylesheet" href="styles/layout.css">
-		<link rel="stylesheet" type="text/css" href="styles/dark_theme.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/simple.css"/>
 		<!--[if IE]>
 			<link rel="stylesheet" type="text/css" href="styles/base-ie.css" />
 		<![endif]-->
-		<script src="scripts/basic.js"></script>
-		<script>
-			$( document ).ready(function()
-			{
-				defaultLoad();
-			});
-		</script>
 	</head>
-	<body>
-		<!--Overlay Area==================================================================-->
-		<div class="overlay" id="overlay">
-			<div class="container overlay-container">
-				<h2 id="overlayProjectTitle" style="margin-left: 8px;">Project Title</h2>
-				<div class="two-thirds column project-description scrollbar" id="project-description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis leo in turpis semper dapibus. Etiam nec est ultricies velit condimentum imperdiet. Sed et ultrices orci. Aenean blandit dapibus augue nec pellentesque. Nulla sodales nisi vitae ipsum gravida, in hendrerit lectus ornare. Duis eu ornare sem, a ornare ante. Proin auctor nec felis et ultricies. Aliquam metus felis, aliquam vel rutrum sagittis, pretium nec tellus. Nullam convallis lorem iaculis dui mattis, eu bibendum risus mattis. Curabitur vel arcu ac velit gravida lacinia.</p>
-					<p>Integer vehicula purus sed rhoncus commodo. Aenean eros sapien, gravida in mi ut, auctor auctor felis. Nam aliquet consectetur sagittis. Vestibulum ultrices odio nec arcu malesuada suscipit. Etiam lacus nibh, tempus et pharetra vitae, auctor ac mi. Aliquam faucibus purus convallis felis malesuada fringilla. Donec venenatis justo id dui porttitor placerat. Pellentesque congue justo odio, sit amet dapibus libero elementum non. Vestibulum cursus dignissim sem ultricies interdum. Sed ultricies purus eget nulla pharetra, mollis viverra urna imperdiet. Fusce convallis mattis quam, in fermentum quam interdum eu. Nam odio augue, fermentum ornare pellentesque nec, volutpat ut sem. Sed ornare arcu et malesuada lobortis. Aliquam erat volutpat. Duis rutrum, erat quis interdum facilisis, nunc arcu blandit libero, suscipit egestas mi velit a massa.</p>
-					<p>Pellentesque consectetur lacus accumsan augue sagittis, at lobortis augue pulvinar. Maecenas elit dui, sodales nec sem consectetur, porttitor vestibulum dolor. Curabitur nec tincidunt quam, sit amet sodales metus. Fusce feugiat massa facilisis lorem tempus posuere. Nulla cursus, sapien elementum fringilla dapibus, massa elit scelerisque felis, non ultricies tortor metus facilisis lacus. Nam mollis tellus quis massa viverra, vitae blandit dolor varius. Nunc sem tortor, tincidunt id dui nec, gravida volutpat mi. Etiam iaculis imperdiet augue eget tempus. Fusce tellus elit, porta non odio a, volutpat mollis enim.</p>
-					<p>Phasellus euismod egestas turpis, a tempor sem ullamcorper condimentum. Aenean congue pulvinar tellus id tempus. In hac habitasse platea dictumst. Donec vestibulum et dolor eu blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id ante nec purus mattis adipiscing. Etiam posuere turpis et est pulvinar malesuada. Fusce hendrerit, nisi non iaculis ultrices, leo nulla dapibus erat, sit amet aliquet mauris eros ut nisl. Maecenas at est ornare, convallis diam vel, feugiat nibh.</p>
-					<p>Nam vel est gravida, commodo est sed, facilisis neque. Suspendisse lobortis lectus sit amet ultrices convallis. Sed leo ligula, hendrerit eget nunc nec, pharetra pellentesque elit. Donec ultricies tellus eget quam tempor, egestas faucibus dui pretium. Duis et quam ac nisi vestibulum tristique at non tortor. Nulla at lacus arcu. Phasellus auctor mauris eget metus auctor, eget congue diam porta. Vivamus dictum turpis lacinia leo egestas, a facilisis augue ultricies. Cras sed consectetur ligula, eu mollis velit.</p>
-				</div>
-				<div class="one-third column">
-					<p>Image</p>
-					<p>Link</p>
-					<p>Role</p>
-					<p>Collaborators</p>
-					<p>Miscellaneous</p>
-					<button onclick="toggleOverlay()">Hide Overlay</button>
-				</div>
-			</div>
-		</div>
-		<!--Overlay Box Area==============================================================-->
+	<body ng-app="app">
 		<!--Header Area===================================================================-->
 		<div class="super-container full-width">
 			<div class="container">
 				<header>
 					<div class="sixteen columns" style="margin-top: 40px;">
-						<div class="eight columns alpha">
+						<div class="twelve columns alpha">
 							<h1>
 								Alexander Lyons
 							</h1>
 						</div>
 					</div>
 				</header>
-				<hr />
 			</div>
 		</div>
-		<!--Content Area==================================================================-->
+		<!--Nav Bar Area==================================================================-->
 		<div class="super-container full-width">
 			<div class="container">
-				<div id="content">
-				<div id="home">
-					<h2>Welcome to the site!</h2>
-					<p>
-						If you made it here looking for Alexander Lyons, Atlanta-based software engineer and programmer, you found me.
-						<!--<button onclick="toggleOverlay()">Show Overlay</button>-->
-					</p>
-					<div class="one-third column">
-						<!-- <button class="projectButton" onclick="showOverlay('Lume Personal Tracker')"> -->
-							<h3>Lume Personal Tracker</h3>
-							<p>Role(s): Software Engineer</p>
-							<p>I am currently developing <a href="http://lumeapp.co/" target="_blank">Lume Personal Tracker</a> while working at Magnimbus LLC. The app is being built using Objective-C and formerly developed using Xamarin (formerly Monotouch).</p>
-						<!-- </button> -->
+				<nav class="navbar">
+					<div class="container">
+						<ul class="navbar-list">
+							<li class="navbar-item"><a class="navbar-link" href="#home">Home</a></li>
+							<li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
+							<li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
+							<li class="navbar-item"><a class="navbar-link" href="#contact">Contact</a></li>
+						</ul>
 					</div>
-					<div class="one-third column">
-						<h3>AI Shell</h3>
-						<p>Role(s): Software Engineer</p>
-						<p>The <a href="https://github.com/alyons/AI-Shell--C--" target="_blank">AI Shell</a> is something I crafted partially working on a few projects from school, which crystallized while working on Lume. We use this to test data against goals users set within Lume. I am also looking to use it in other porjects in the future.</p>
-					</div>
-					<div class="one-third column">
-						<h3>Automated Build and Testing</h3>
-						<p>Role(s): Author</p>
-						<p>This is a <a href="AutomatedBuildAndTesting.pdf">paper</a> I wrote for a software engineering course based around process and process improvement. While we have not been able to implement the automated build and testing for Lume, we are always looking to improve our process in any way we can.</p>
-					</div>
-				</div>
-				<div id="projects" style="display: none;">
-					<h3>Current Projects</h3>
-					<ul>
-						<li><a href="http://lumeapp.co/" target="_blank">Lume Personal Tracker</a> - Role: Software Engineer, Tester</li>
-						<li><a href="http://minecraft.alexanderlyons.net/" target="_blank">Website for Minecraft Server</a> - Role: Software Engineer</li>
-					</ul>
-					<h3>Suspended Projects</h3>
-					<ul>
-						<li><a href="http://www.youtube.com/watch?v=r62Kv-Rz9H4" target="_blank">Chaos Drive</a> - Role: Designer, Software Engineer, Tester</li>
-						<li><a href="http://rsilvera.com/docs/asmalljourney.html" target="_blank">A Small Journey</a> <a href="https://www.youtube.com/watch?v=5PLAG88bXlA" target="_blank">Video</a> - Role: Software Engineer</li>
-						<li>Sudoquest - Role: Software Engineer, Designer</li>
-					</ul>
-				</div>
-				<div id="about" style="display: none;">
-					<h3>About Me</h3>
-					<p>I am a software engineer and programmer both in my career and my spare time. I enjoy tinkering around with various technologies (part of how this website came into being).</p>
-				</div>
-				<div id="contact" style="display: none;">
-					<h3>Contact Me</h3>
-					<p>Email: alexander.n.lyons@gmail.com</p>
-					<p>Resume can be found <a href="Resume_05-02-2015.pdf">here</a>.
-				</div>
-			</div>
+				</nav>
 			</div>
 		</div>
-		<!--Navigation Area===============================================================-->
+		<!--Main Area=====================================================================-->
 		<div class="super-container full-width">
 			<div class="container">
-				<div id="navigation">
-					<button id="homeBtn" class="navButton" onclick="showHomeContent()">Home</button>
-					<button id="projectsBtn" class="navButton" onclick="showProjectsContent()">Projects</button>
-					<button id="aboutBtn" class="navButton" onclick="showAboutContent()">About Me</button>
-					<button id="contactBtn" class="navButton" onclick="showContactContent()">Contact</button>
-				</div>
+				<ng-view></ng-view>
 			</div>
 		</div>
 		<!--Footer Area===================================================================-->
@@ -149,9 +76,12 @@
 		<div class="super-container full-width">
 			<div class="container">
 				<div id="footer">
-					<p>Copyright &copy; 2013, 2014, 2015 Alexander Lyons</p>
+					<p>Copyright &copy; 2013, 2014, 2015, 2016 Alexander Lyons</p>
 				</div>
 			</div>
 		</div>
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-route/angular-route.js"></script>
+		<script src="scripts/app.js"></script>
 	</body>
 </html>

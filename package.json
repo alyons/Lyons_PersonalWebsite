@@ -2,7 +2,6 @@
   "name": "lyons_personal_website",
   "version": "1.0.0",
   "description": "This is the personal website for me",
-  "main": "index.js",
   "scripts": {
     "test": "hello"
   },
