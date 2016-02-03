@@ -1,0 +1,18 @@
+{
+  "name": "lyons_personal_website",
+  "version": "1.0.0",
+  "description": "This is the personal website for me",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyons/Lyons_PersonalWebsite.git"
+  },
+  "author": "Alexander Lyons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyons/Lyons_PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/alyons/Lyons_PersonalWebsite#readme"
+}
