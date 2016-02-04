@@ -27,6 +27,7 @@
 		<link rel="stylesheet" href="styles/skeleton.css">
 		<link rel="stylesheet" href="styles/layout.css">
 		<link rel="stylesheet" type="text/css" href="styles/simple.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/menu-styles.css"/>
 		<!--[if IE]>
 			<link rel="stylesheet" type="text/css" href="styles/base-ie.css" />
 		<![endif]-->
@@ -43,12 +44,13 @@
 		<input type="checkbox" id="navmenu-trigger" class="navmenu-trigger" />
 		<label id="navmenu-label" for="navmenu-trigger"></label>
 
-		<div class="site-wrap">
+		<!-- <div class="site-wrap"> -->
+		<div class="super-container full-width site-wrap">
 			<!--Header Area===================================================================-->
-			<div class="super-container full-width">
 				<div class="container">
 					<header>
 						<div class="sixteen columns" style="margin-top: 40px;">
+
 							<div class="twelve columns alpha">
 								<h1>
 									Alexander Lyons
@@ -57,9 +59,7 @@
 						</div>
 					</header>
 				</div>
-			</div>
 			<!--Nav Bar Area==================================================================-->
-			<div class="super-container full-width">
 				<div class="container">
 					<nav class="navbar">
 						<div class="container">
@@ -72,27 +72,21 @@
 						</div>
 					</nav>
 				</div>
-			</div>
 			<!--Main Area=====================================================================-->
-			<div class="super-container full-width">
 				<div class="container">
 					<div ng-view></div>
 				</div>
-			</div>
 			<!--Footer Area===================================================================-->
-			<div class="super-container full-width">
 				<div class="container">
 				</div>
-			</div>
 			<!--Sub-footer Area===============================================================-->
-			<div class="super-container full-width">
 				<div class="container">
 					<div id="footer">
-						<p>Copyright &copy; 2013, 2014, 2015, 2016 Alexander Lyons</p>
+						<p>Copyright &copy; 2013 - 2016 Alexander Lyons</p>
 					</div>
 				</div>
-			</div>
 		</div>
+		<!-- </div> -->
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-route/angular-route.js"></script>
 		<script src="scripts/app.js"></script>
