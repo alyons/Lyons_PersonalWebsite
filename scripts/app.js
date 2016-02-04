@@ -1,6 +1,6 @@
 (function () {
   var app = angular.module("app", ['ngRoute']);
-  var checkbox = document.getElementById('navmenu-trigger')
+  var checkbox = document.getElementById('navmenu-trigger');
 
   app.config(function ($routeProvider) {
     $routeProvider
@@ -24,7 +24,7 @@
       })
       .when("/contact", {
         // template:"<h1>Contact</h1>"
-        checkbox.checked = false;
+        // checkbox.checked = false;
         templateUrl: "pages/contact.html";
   	    cosole.log("Contact clicked: " + checkbox.checked);
       })
