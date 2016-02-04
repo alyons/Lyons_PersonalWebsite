@@ -5,28 +5,38 @@
   app.config(function ($routeProvider) {
     $routeProvider
       .when("/home", {
-        // template:"<h1>Home</h1>"
-        // checkbox.checked = false;
-        templateUrl: "pages/home.html";
-        console.log("Home clicked: " + checkbox.checked);
+        templateUrl: "pages/home.html",
+        controller: function () {
+          checkbox.checked = false;
+          console.log("Home clicked: " + checkbox.checked);
+        }
       })
       .when("/projects", {
         // template:"<h1>Projects</h1>"
         // checkbox.checked = false;
-        templateUrl: "pages/projects.html";
-        console.log("Projects clicked: " + checkbox.checked);
+        templateUrl: "pages/projects.html",
+        controller: function () {
+          checkbox.checked = false;
+          console.log("Projects clicked: " + checkbox.checked);
+        }
       })
       .when("/about", {
         // template:"<h1>About</h1>"
         // checkbox.checked = false;
-        templateUrl: "pages/about.html";
-  	    cosole.log("About clicked: " + checkbox.checked);
+        templateUrl: "pages/about.html",
+        controller: function () {
+          checkbox.checked = false;
+          console.log("About clicked: " + checkbox.checked);
+        }
       })
       .when("/contact", {
         // template:"<h1>Contact</h1>"
         // checkbox.checked = false;
-        templateUrl: "pages/contact.html";
-  	    cosole.log("Contact clicked: " + checkbox.checked);
+        templateUrl: "pages/contact.html",
+        controller: function () {
+          checkbox.checked = false;
+          console.log("Contact clicked: " + checkbox.checked);
+        }
       })
       .otherwise({
         redirectTo: "/home"
