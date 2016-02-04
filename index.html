@@ -32,51 +32,64 @@
 		<![endif]-->
 	</head>
 	<body ng-app="app">
-		<!--Header Area===================================================================-->
-		<div class="super-container full-width">
-			<div class="container">
-				<header>
-					<div class="sixteen columns" style="margin-top: 40px;">
-						<div class="twelve columns alpha">
-							<h1>
-								Alexander Lyons
-							</h1>
+		<!--Menu Area=====================================================================-->
+		<ul class="navmenu">
+			<li class="navmenu-item"><a href="#home">Home</a></li>
+    	<li class="navmenu-item"><a href="#projects">Projects</a></li>
+    	<li class="navmenu-item"><a href="#about">About</a></li>
+    	<li class="navmenu-item"><a href="#contact">Contact</a></li>
+		</ul>
+
+		<input type="checkbox" id="navmenu-trigger" class="navmenu-trigger" />
+		<label for="navmenu-trigger"></label>
+
+		<div class="site-wrap">
+			<!--Header Area===================================================================-->
+			<div class="super-container full-width">
+				<div class="container">
+					<header>
+						<div class="sixteen columns" style="margin-top: 40px;">
+							<div class="twelve columns alpha">
+								<h1>
+									Alexander Lyons
+								</h1>
+							</div>
 						</div>
+					</header>
+				</div>
+			</div>
+			<!--Nav Bar Area==================================================================-->
+			<div class="super-container full-width">
+				<div class="container">
+					<nav class="navbar">
+						<div class="container">
+							<ul class="navbar-list">
+								<li class="navbar-item"><a class="navbar-link" href="#home">Home</a></li>
+								<li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
+								<li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
+								<li class="navbar-item"><a class="navbar-link" href="#contact">Contact</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<!--Main Area=====================================================================-->
+			<div class="super-container full-width">
+				<div class="container">
+					<div ng-view></div>
+				</div>
+			</div>
+			<!--Footer Area===================================================================-->
+			<div class="super-container full-width">
+				<div class="container">
+				</div>
+			</div>
+			<!--Sub-footer Area===============================================================-->
+			<div class="super-container full-width">
+				<div class="container">
+					<div id="footer">
+						<p>Copyright &copy; 2013, 2014, 2015, 2016 Alexander Lyons</p>
 					</div>
-				</header>
-			</div>
-		</div>
-		<!--Nav Bar Area==================================================================-->
-		<div class="super-container full-width">
-			<div class="container">
-				<nav class="navbar">
-					<div class="container">
-						<ul class="navbar-list">
-							<li class="navbar-item"><a class="navbar-link" href="#home">Home</a></li>
-							<li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
-							<li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
-							<li class="navbar-item"><a class="navbar-link" href="#contact">Contact</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-		<!--Main Area=====================================================================-->
-		<div class="super-container full-width">
-			<div class="container">
-				<div ng-view></div>
-			</div>
-		</div>
-		<!--Footer Area===================================================================-->
-		<div class="super-container full-width">
-			<div class="container">
-			</div>
-		</div>
-		<!--Sub-footer Area===============================================================-->
-		<div class="super-container full-width">
-			<div class="container">
-				<div id="footer">
-					<p>Copyright &copy; 2013, 2014, 2015, 2016 Alexander Lyons</p>
 				</div>
 			</div>
 		</div>
