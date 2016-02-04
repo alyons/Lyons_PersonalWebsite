@@ -10,9 +10,15 @@
     "url": "git+https://github.com/alyons/Lyons_PersonalWebsite.git"
   },
   "author": "Alexander Lyons",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/alyons/Lyons_PersonalWebsite/issues"
   },
-  "homepage": "https://github.com/alyons/Lyons_PersonalWebsite#readme"
+  "homepage": "https://github.com/alyons/Lyons_PersonalWebsite#readme",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9"
+  },
+  "devDependencies": {}
 }
