@@ -127,6 +127,7 @@ p
 }
 
 .navmenu-trigger {
+	display: inline;
 	position: absolute;
 	clip: rect(0, 0, 0, 0);
 }
@@ -193,6 +194,10 @@ label[for="navmenu-trigger"] {
 	}
 
 	.navmenu {
+		display: hidden;
+	}
+
+	.navmenu-trigger {
 		display: hidden;
 	}
 

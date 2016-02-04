@@ -1,6 +1,7 @@
 (function () {
   var app = angular.module("app", ['ngRoute']);
   var checkbox = document.getElementById('navmenu-trigger');
+  var label = document.getElementById('navmenu-label');
 
   app.config(function ($routeProvider) {
     $routeProvider
