@@ -95,6 +95,6 @@ label[for="navmenu-trigger"] {
 	}
 
 	label[for="navmenu-trigger"] {
-		display: hidden;
+		display: none;
 	}
 }
