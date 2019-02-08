@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - prod
+    Description: Enter either dev or prod. The default value is dev.
+
+Conditions:
+  IsProd: !Equals [!Ref Environment, prod]
+
+Resources:
+  StaticFileStore:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !If [IsProd, 'alexanderlyons.net', 'dev.alexanderlyons.net']
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+  SampleBucketPolicy: 
+    Type: AWS::S3::BucketPolicy
+    Properties: 
+      Bucket: 
+        Ref: "StaticFileStore"
+      PolicyDocument: 
+        Statement: 
+          - 
+            Action: 
+              - "s3:GetObject"
+            Effect: "Allow"
+            Resource: 
+              Fn::Join: 
+                - ""
+                - 
+                  - "arn:aws:s3:::"
+                  - 
+                    Ref: "StaticFileStore"
+                  - "/*"
+            Principal: "*"
+  WebsiteUrl:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: s3-website-us-east-1.amazonaws.com
+        HostedZoneId: Z3AQBSTGFYJSTF
+      HostedZoneId: Z3BEDJTHV3D8EZ
+      Name: !If [IsProd, 'alexanderlyons.net.', 'dev.alexanderlyons.net.']
+      Type: A
