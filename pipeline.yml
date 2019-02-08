@@ -154,16 +154,6 @@ Resources:
         Image: !Sub ${BuildImage}
       Source:
         Type: CODEPIPELINE
-        BuildSpec: !Sub |
-          version: 0.1
-          phases:
-            post_build:
-              commands:
-                - aws s3 cp --recursive --acl public-read ./dist s3://${SiteBucketName}/ 
-          artifacts:
-            type: zip
-            files:
-              - ./html/index.html
       TimeoutInMinutes: 10
   Pipeline:
     Type: AWS::CodePipeline::Pipeline
