@@ -17,8 +17,8 @@
   "homepage": "https://github.com/alyons/Lyons_PersonalWebsite#readme",
   "main": "index.html",
   "dependencies": {
-    "angular": ">=1.7.9",
-    "angular-route": ">=1.6.0"
+    "angular": "^1.7.9",
+    "angular-route": "^1.7.9"
   },
   "devDependencies": {}
 }
