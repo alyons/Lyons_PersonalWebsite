@@ -108,6 +108,3 @@ dist
 
 # WebStorm-specific Files
 .idea/
-
-# Build Folder
-dist/
