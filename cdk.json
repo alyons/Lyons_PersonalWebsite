@@ -1,0 +1,7 @@
+{
+  "app": "cdk/index.js",
+  "context": {
+    "domain": "alexanderlyons.net",
+    "subDomain": "www"
+  }
+}
