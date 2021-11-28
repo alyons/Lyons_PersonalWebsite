@@ -14,5 +14,3 @@ render(
   </ThemeProvider>,
   document.getElementById('root') // eslint-disable-line no-undef
 );
-
-if (module.hot) module.hot.accept(); // eslint-disable-line no-undef

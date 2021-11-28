@@ -1,23 +1,60 @@
-/** @jsx jsx */
-
 import React from 'react';
 import { Link as RouterLink, useParams } from 'react-router-dom'; 
-import { jsx } from '@emotion/react';
 import {
   Box,
-  Typography
+  Button,
+  Typography,
+  ImageList,
+  ImageListItem
 } from '@mui/material';
+import ArrowBack from '@mui/icons-material/ArrowBack';
 
-const Content = (props) => {
-  const { contentId } = useParams();
+import contentData from '../assets/data/content';
 
-  let content;
-
-  // Logic to load content data and parse
-
+const EmptyContent = ({ id, ...props }) => {
   return (
     <Box>
-      <Typography>This will be for the content</Typography>
+      <Typography>Unable to find content for {id}...</Typography>
+    </Box>
+  );
+};
+
+const AlbumContent = ({ images, ...props }) => {
+  return (
+    <ImageList>
+      {images.map((item) => (
+        <ImageListItem key={item.default}>
+          <img src={item.default} />
+        </ImageListItem>
+      ))}
+    </ImageList>
+  );
+};
+
+const CONTENT_SX = {
+  margin: 2
+};
+
+const Content = ({ ...props }) => {
+  const { id } = useParams();
+
+  let content = contentData.find(item => item.id === id)?.content;
+  let contentChild;
+
+  if (!content) {
+    contentChild = <EmptyContent id={id} />;
+  }
+
+  switch (content.type) {
+    default: contentChild = <AlbumContent {...content} />;
+  }
+
+  return (
+    <Box sx={CONTENT_SX}>
+      <Button startIcon={<ArrowBack />} component={RouterLink} to='/'>
+        Back Home
+      </Button>
+      {contentChild}
     </Box>
   );
 };
