@@ -70,7 +70,7 @@ const Hero = (props) => {
             </IconButton>
           </Box>
           <Box sx={LINK_BAR_SX}>
-            <Button>Resume</Button>
+            <Button href='https://docs.google.com/document/d/1YMHX4Qe8o2GR_OK-EeklxIRSWFMn3mZc9M-uENi8OWY/edit?usp=sharing' target='_blank'>Resume</Button>
           </Box>
         </Box>
       </Box>
