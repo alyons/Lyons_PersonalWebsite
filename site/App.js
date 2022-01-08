@@ -9,7 +9,7 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <Box>
-        <Header />
+        {/* <Header /> */}
         <Router />
       </Box>
     </BrowserRouter>

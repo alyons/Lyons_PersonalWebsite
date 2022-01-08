@@ -2,28 +2,78 @@
 
 import React from 'react';
 import {
+  Avatar,
   Box,
+  Button,
+  IconButton,
+  Card,
   Typography
 } from '@mui/material';
+import Book from '@mui/icons-material/Book';
+import LinkedIn from '@mui/icons-material/LinkedIn';
+import GitHub from '@mui/icons-material/GitHub';
+
 import { jsx } from '@emotion/react';
+
+import profile_picture from '../assets/images/me/profile_icon_alex.jpg';
+
+const ROOT_SX = {
+  height: '100vh',
+  background: 'red'
+};
+
+const CONTAINER_SX = {
+  x: 1,
+  background: '#fafafa',
+  display: 'block',
+  p: 4,
+  // my: 'auto'
+};
+
+const IMAGE_SX = {
+  display: 'flex',
+  mx: 'auto',
+  width: '50%',
+  clipPath: 'circle(50%)',
+  // my: 1
+};
+
+const LINK_BAR_SX = {
+  display: 'inline-flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  width: '100%'
+};
 
 const Hero = (props) => {
   return (
-    <Box>
-      <Typography align='center' variant='h4'>Hi! I'm Alex!</Typography>
-      <Typography align='center'>
-        Sorry for the dust, I am currently building the website, so it's still a definite work in progress.
-      </Typography>
-      <Typography align='center'>
-        I should get some good pictures done. In downtown Atlanta for the flex.
-      </Typography>
-      <Typography align='center'>
-        If you found this website, you were probably looking for me, so good job!
-        I am a software engineer with ADHD who like to just do random things.
-        I enjoy tinkering with software, cooking, video games, table top RPGs, card games, and even more!
-        Every year I try to participate in Extra Life to give back to the community.
-        Oh, and I have cat named Lord Salem Windgrace Lyons. Or Ratfinx Twinkledinks. Or Asshole! Get out of the pantry!
-      </Typography>
+    <Box sx={ROOT_SX}>
+      <Box sx={CONTAINER_SX}>
+        <Box component='img' src={profile_picture} sx={IMAGE_SX} />
+        <Box>
+          <Typography align='center' variant='h3'>Alex Lyons</Typography>
+          <Typography align='center'>Altanta, GA</Typography>
+          <Typography align='center' variant='h6'>Senior Consultant - Slalom, LLC</Typography>
+          <Typography align='center'>
+            Hey! If you found this website, you were probably looking for me, so glad you found me.
+            I am a Senior DevOps Engineer who dabbles in one too many hobbies.
+          </Typography>
+          <Box sx={LINK_BAR_SX}>
+            <IconButton href='https://www.linkedin.com/in/alexander-lyons-b2058659/' target='_blank'>
+              <LinkedIn />
+            </IconButton>
+            <IconButton href='https://github.com/alyons' target='_blank'>
+              <GitHub />
+            </IconButton>
+            <IconButton href='https://breadoralive.com' target='_blank'>
+              <Book />
+            </IconButton>
+          </Box>
+          <Box sx={LINK_BAR_SX}>
+            <Button>Resume</Button>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
